@@ -1,0 +1,9 @@
+$ cmake -S '<PHYSICS>/external/fers' -B '<PHYSICS>/build/fers' -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_POLICY_VERSION_MINIMUM=3.5 '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/fers' -DFERS_BUILD_TESTS=OFF
+CMake Error at CMakeLists.txt:89 (message):
+  Could not locate vcpkg toolchain file.  Set VCPKG_ROOT or
+  CMAKE_TOOLCHAIN_FILE before configuring.
+
+
+-- Configuring incomplete, errors occurred!
+
+BLOCKED: Command '['cmake', '-S', '<PHYSICS>/external/fers', '-B', '<PHYSICS>/build/fers', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_C_COMPILER=/usr/bin/clang', '-DCMAKE_CXX_COMPILER=/usr/bin/clang++', '-DCMAKE_OSX_ARCHITECTURES=arm64', '-DCMAKE_POLICY_VERSION_MINIMUM=3.5', '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/fers', '-DFERS_BUILD_TESTS=OFF']' returned non-zero exit status 1.

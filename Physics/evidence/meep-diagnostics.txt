@@ -1,0 +1,2 @@
+
+BLOCKED: autoreconf missing; install Autotools, FFTW, HDF5, Guile, libctl, Harminv; see scripts/install-native.sh

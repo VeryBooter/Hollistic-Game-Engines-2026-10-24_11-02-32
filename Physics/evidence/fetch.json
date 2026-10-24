@@ -1,0 +1,67 @@
+{
+  "jsbsim": {
+    "acquired": true,
+    "commit": "570e8115a102df8f877b11e0e59b964ea483e3c0",
+    "log": "artifacts/logs/jsbsim-fetch.log"
+  },
+  "chrono": {
+    "acquired": true,
+    "commit": "2617649bf687456328a122b63dc0bb64df91394a",
+    "log": "artifacts/logs/chrono-fetch.log"
+  },
+  "sofa": {
+    "acquired": true,
+    "commit": "23efcef14ddcd53278cade3e69d984cc6929939d",
+    "log": "artifacts/logs/sofa-fetch.log"
+  },
+  "moose": {
+    "acquired": true,
+    "commit": "df029b7e4c9e4b491217693b694c1db999d3aeb0",
+    "log": "artifacts/logs/moose-fetch.log"
+  },
+  "su2": {
+    "acquired": true,
+    "commit": "a991912e65f927ca9a500cb9600f88c3c739888f",
+    "log": "artifacts/logs/su2-fetch.log"
+  },
+  "openvsp": {
+    "acquired": true,
+    "commit": "df8e0e14d0031eeca8b619d89515a5f07555f4b6",
+    "log": "artifacts/logs/openvsp-fetch.log"
+  },
+  "radarsim": {
+    "acquired": true,
+    "commit": "e5ff4d307f3dc5193bc584d236ccdfceaeaa0996",
+    "log": "artifacts/logs/radarsim-fetch.log"
+  },
+  "fers": {
+    "acquired": true,
+    "commit": "f86c89fd7a507df423fd2a23f366fa0f9377ff81",
+    "log": "artifacts/logs/fers-fetch.log"
+  },
+  "meep": {
+    "acquired": true,
+    "commit": "7a66b7f0d63a08790778c299aa3fc8b03abee2e7",
+    "log": "artifacts/logs/meep-fetch.log"
+  },
+  "cantera": {
+    "acquired": true,
+    "commit": "6e0027548cf295bd478b8acfe34816f2db6dd58b",
+    "log": "artifacts/logs/cantera-fetch.log"
+  },
+  "coolprop": {
+    "acquired": true,
+    "commit": "a29eac7ff4408b6e707234baf9c1e7e0b35377a2",
+    "log": "artifacts/logs/coolprop-fetch.log"
+  },
+  "precice": {
+    "acquired": true,
+    "commit": "c5689fd74e952ac005ed92ba305819fbf7bdc364",
+    "log": "artifacts/logs/precice-fetch.log"
+  },
+  "eigen": {
+    "acquired": true,
+    "commit": "3147391d946bb4b6c68edd901f2add6ac1f31f8c",
+    "log": "artifacts/logs/eigen-fetch.log"
+  }
+}

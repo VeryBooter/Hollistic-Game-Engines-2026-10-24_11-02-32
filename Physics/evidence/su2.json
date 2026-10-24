@@ -1,0 +1,20 @@
+[
+  {
+    "schema_version": "1.0",
+    "module": "su2",
+    "time_s": 0.0,
+    "step_s": 0.0,
+    "frame": "NED",
+    "units": "SI",
+    "flow_analysis": {
+      "case": "uniform_2d_euler",
+      "iterations_recorded": 10,
+      "residuals_log10": {
+        "rms[Rho]": -14.18590838,
+        "rms[RhoU]": -11.83552354,
+        "rms[RhoV]": -11.83557709,
+        "rms[RhoE]": -8.666532186
+      }
+    }
+  }
+]

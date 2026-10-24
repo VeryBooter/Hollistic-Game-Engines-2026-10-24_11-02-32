@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "module": {
+      "type": "string",
+      "minLength": 1
+    },
+    "time_s": {
+      "type": "number",
+      "minimum": 0
+    },
+    "step_s": {
+      "type": "number",
+      "minimum": 0
+    },
+    "frame": {
+      "const": "NED"
+    },
+    "units": {
+      "const": "SI"
+    },
+    "position_m": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "velocity_m_s": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "altitude_m": {
+      "type": "number"
+    },
+    "temperature_K": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "atmosphere": {
+      "type": "object",
+      "properties": {
+        "temperature_K": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "pressure_Pa": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "density_kg_m3": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "sound_speed_m_s": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "specific_heat_J_kg_K": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "temperature_K",
+        "pressure_Pa"
+      ],
+      "additionalProperties": false
+    },
+    "loads": {
+      "type": "object",
+      "properties": {
+        "frame": {
+          "enum": [
+            "NED",
+            "BODY_FRD"
+          ]
+        },
+        "force_N": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "torque_N_m": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "frame",
+        "force_N",
+        "torque_N_m"
+      ],
+      "additionalProperties": false
+    },
+    "mass_properties": {
+      "type": "object",
+      "properties": {
+        "mass_kg": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "center_of_mass_body_m": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "inertia_body_kg_m2": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "required": [
+        "mass_kg"
+      ],
+      "additionalProperties": false
+    },
+    "geometry": {
+      "type": "object",
+      "properties": {
+        "revision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mesh_uri": {
+          "type": "string"
+        },
+        "displacements_m": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          }
+        },
+        "vertex_ids": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "frame": {
+          "enum": [
+            "NED",
+            "BODY_FRD"
+          ]
+        }
+      },
+      "required": [
+        "revision",
+        "frame"
+      ],
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "source_module": {
+          "type": "string"
+        },
+        "source_time_s": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "source_module",
+        "source_time_s"
+      ],
+      "additionalProperties": false
+    },
+    "chemistry": {
+      "type": "object",
+      "properties": {
+        "pressure_Pa": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "initial_enthalpy_J_kg": {
+          "type": "number"
+        },
+        "enthalpy_J_kg": {
+          "type": "number"
+        },
+        "species_mole_fractions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      },
+      "required": [
+        "pressure_Pa",
+        "initial_enthalpy_J_kg",
+        "enthalpy_J_kg",
+        "species_mole_fractions"
+      ],
+      "additionalProperties": false
+    },
+    "flow_analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "case",
+        "iterations_recorded",
+        "residuals_log10"
+      ],
+      "properties": {
+        "case": {
+          "const": "uniform_2d_euler"
+        },
+        "iterations_recorded": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "residuals_log10": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "module",
+    "time_s",
+    "step_s",
+    "frame",
+    "units"
+  ],
+  "additionalProperties": false
+}

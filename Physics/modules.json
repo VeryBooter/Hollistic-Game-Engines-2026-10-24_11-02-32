@@ -1,0 +1,69 @@
+{
+  "jsbsim": {
+    "mode": "realtime_candidate",
+    "enabled": true,
+    "adapter": "python_worker"
+  },
+  "chrono": {
+    "mode": "realtime_candidate",
+    "enabled": true,
+    "adapter": "python_worker"
+  },
+  "sofa": {
+    "mode": "realtime_candidate",
+    "enabled": false,
+    "adapter": "external_process",
+    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+  },
+  "moose": {
+    "mode": "offline",
+    "enabled": false,
+    "adapter": "external_process",
+    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+  },
+  "su2": {
+    "enabled": true,
+    "mode": "offline",
+    "adapter": "native_process"
+  },
+  "openvsp": {
+    "mode": "offline",
+    "enabled": false,
+    "adapter": "external_process",
+    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+  },
+  "radarsim": {
+    "mode": "offline",
+    "enabled": false,
+    "adapter": "external_process",
+    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+  },
+  "fers": {
+    "mode": "offline",
+    "enabled": false,
+    "adapter": "external_process",
+    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+  },
+  "meep": {
+    "mode": "offline",
+    "enabled": false,
+    "adapter": "external_process",
+    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+  },
+  "cantera": {
+    "mode": "offline",
+    "enabled": true,
+    "adapter": "python_worker"
+  },
+  "coolprop": {
+    "mode": "offline",
+    "enabled": true,
+    "adapter": "python_worker"
+  },
+  "precice": {
+    "mode": "offline",
+    "enabled": false,
+    "adapter": "external_process",
+    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+  }
+}

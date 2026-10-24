@@ -1,0 +1,6 @@
+{
+  "jobs": [
+    {"id": "flight", "module": "jsbsim", "config": {"altitude_m": 1000, "step_s": 0.01, "steps": 100}},
+    {"id": "air_properties", "module": "coolprop", "input_from": "flight"}
+  ]
+}

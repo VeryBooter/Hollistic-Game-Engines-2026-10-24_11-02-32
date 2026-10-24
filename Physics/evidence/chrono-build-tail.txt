@@ -1,0 +1,65 @@
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/internal/itoa.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/internal/stack.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/internal/dtoa.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/internal/clzll.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/internal/meta.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/internal/pow10.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/encodings.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/schema.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/stream.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/filewritestream.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/rapidjson.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/document.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/allocators.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/writer.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/error
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/error/error.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/error/en.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/memorybuffer.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/pointer.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/msinttypes
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/msinttypes/inttypes.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidjson/msinttypes/stdint.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidxml
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidxml/rapidxml_iterators.hpp
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidxml/rapidxml_print.hpp
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidxml/rapidxml_utils.hpp
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/rapidxml/rapidxml.hpp
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/tinyobjloader
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/tinyobjloader/tiny_obj_loader.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/chpf
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/stb
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/stb/stb_image_write.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/stb/stb_image_resize.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/stb/stb.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/stb/stb_image.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/variant
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono_thirdparty/variant/variant.hpp
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono/ChConfig.h
+-- Up-to-date: <PHYSICS>/install/chrono/include/chrono/ChVersion.h
+-- Up-to-date: <PHYSICS>/install/chrono/lib/cmake/Chrono/chrono-config.cmake
+$ cmake -S '<PHYSICS>/native' -B '<PHYSICS>/build/bridge' -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_POLICY_VERSION_MINIMUM=3.5 '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/chrono' '-DChrono_DIR=<PHYSICS>/install/chrono/lib/cmake/Chrono'
+-- Finding package Chrono...
+--    CHRONO_CXX_FLAGS         (Compiler flags): ;-march=native;-DEIGEN_DONT_PARALLELIZE
+--    CHRONO_C_FLAGS           (Compiler flags): ;-march=native;-DEIGEN_DONT_PARALLELIZE
+--    CHRONO_LINKER_FLAGS      (Linker flags): ;-Wl,-no_compact_unwind;-L<PHYSICS>/install/chrono/lib
+--    CHRONO_INCLUDE_DIRS      (Chrono include directories): <PHYSICS>/install/chrono/include;<PHYSICS>/install/chrono/include/chrono;<PHYSICS>/install/chrono/include/chrono/collision/bullet;<PHYSICS>/install/chrono/include/chrono/collision/gimpact;<PHYSICS>/install/chrono/include/chrono_thirdparty/HACD;<PHYSICS>/install/chrono/include/chrono_thirdparty/HACDv2;<PHYSICS>/external/eigen;
+--    CHRONO_LIB_NAMES         (Chrono library names): ChronoModels_robot;ChronoEngine
+--    CHRONO_LIBRARIES         (Chrono libraries): <PHYSICS>/install/chrono/lib/libChronoModels_robot.dylib;<PHYSICS>/install/chrono/lib/libChronoEngine.dylib
+--    CHRONO_DATA_DIR          (Path to Chrono data folder): <PHYSICS>/install/chrono/share/chrono/data/
+--    CHRONO_VEHICLE_DATA_DIR  (Path to Chrono::Vehicle data folder): <PHYSICS>/install/chrono/share/chrono/data/vehicle/
+--    CHRONO_FSI_DATA_DIR      (Path to Chrono::FSI data folder): <PHYSICS>/install/chrono/share/chrono/data/fsi/
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: <PHYSICS>/build/bridge
+$ cmake --build '<PHYSICS>/build/bridge' --parallel 6
+[ 50%] Linking CXX executable chrono_smoke
+[100%] Built target chrono_smoke
+$ ctest --test-dir '<PHYSICS>/build/bridge' --output-on-failure
+Test project <PHYSICS>/build/bridge
+    Start 1: chrono_freefall
+1/1 Test #1: chrono_freefall ..................   Passed    0.79 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.79 sec

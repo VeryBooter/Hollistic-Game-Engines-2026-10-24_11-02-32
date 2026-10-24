@@ -1,0 +1,204 @@
+{
+  "platform": "macOS-26.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.10.18",
+  "modules": {
+    "jsbsim": {
+      "independently_run": true,
+      "integrated": true,
+      "sample_count": 10,
+      "last_sample": {
+        "schema_version": "1.0",
+        "module": "jsbsim",
+        "time_s": 0.09999999999999999,
+        "step_s": 0.01,
+        "frame": "NED",
+        "units": "SI",
+        "atmosphere": {
+          "temperature_K": 281.65108688933884,
+          "pressure_Pa": 89876.83936006321
+        },
+        "altitude_m": 999.9900698343695,
+        "velocity_m_s": [
+          52.37408112704408,
+          9.573928273357624e-06,
+          0.16495214950480946
+        ],
+        "loads": {
+          "frame": "BODY_FRD",
+          "force_N": [
+            -779.9545485925364,
+            2.246386436313965,
+            -7891.573332053485
+          ],
+          "torque_N_m": [
+            -146.8753173617218,
+            1616.5423656211785,
+            32.12349159758244
+          ]
+        },
+        "mass_properties": {
+          "mass_kg": 852.7536438430861
+        }
+      },
+      "distribution_version": "1.2.3"
+    },
+    "coolprop": {
+      "independently_run": true,
+      "integrated": true,
+      "sample_count": 1,
+      "last_sample": {
+        "schema_version": "1.0",
+        "module": "coolprop",
+        "time_s": 0.0,
+        "step_s": 0.0,
+        "frame": "NED",
+        "units": "SI",
+        "atmosphere": {
+          "temperature_K": 288.15,
+          "pressure_Pa": 101325.0,
+          "density_kg_m3": 1.2255390213735047,
+          "sound_speed_m_s": 340.40998328942305,
+          "specific_heat_J_kg_K": 1005.9997169439781
+        },
+        "provenance": {
+          "source_module": "input",
+          "source_time_s": 0.0
+        }
+      },
+      "distribution_version": "7.1.0"
+    },
+    "cantera": {
+      "independently_run": true,
+      "integrated": true,
+      "sample_count": 1,
+      "last_sample": {
+        "schema_version": "1.0",
+        "module": "cantera",
+        "time_s": 0.0,
+        "step_s": 0.0,
+        "frame": "NED",
+        "units": "SI",
+        "temperature_K": 2225.5245834769908,
+        "chemistry": {
+          "pressure_Pa": 101325.00000848407,
+          "initial_enthalpy_J_kg": -254587.0477930031,
+          "enthalpy_J_kg": -254587.04783861092,
+          "species_mole_fractions": {
+            "H2": 0.0036045255136104223,
+            "H": 0.00039034687283544955,
+            "O": 0.00021565877694279263,
+            "O2": 0.004622237223345965,
+            "OH": 0.002875407485003978,
+            "H2O": 0.18346659345859562,
+            "HO2": 4.989233204154234e-07,
+            "H2O2": 4.5732488554729407e-08,
+            "C": 2.2178095205027897e-17,
+            "CH": 3.361534712832581e-18,
+            "CH2": 9.827346325805613e-18,
+            "CH2(S)": 5.956344723561506e-19,
+            "CH3": 6.223564337273372e-17,
+            "CH4": 3.032972311121546e-17,
+            "CO": 0.008987939083205781,
+            "CO2": 0.08536421734727213,
+            "HCO": 7.949764317915415e-10,
+            "CH2O": 1.319499320012692e-11,
+            "CH2OH": 4.114098610314883e-17,
+            "CH3O": 6.575072172301373e-19,
+            "CH3OH": 3.492910599341524e-18,
+            "C2H": 3.671126718843538e-24,
+            "C2H2": 9.146744099222017e-22,
+            "C2H3": 6.921522960080694e-27,
+            "C2H4": 7.2300365224911e-27,
+            "C2H5": 7.843631895958097e-32,
+            "C2H6": 5.6971615173960696e-33,
+            "HCCO": 5.366464467221813e-20,
+            "CH2CO": 7.105979894485302e-20,
+            "HCCOH": 6.968485967076586e-23,
+            "N": 1.4245388908930885e-08,
+            "NH": 2.359734414713003e-09,
+            "NH2": 9.409151776236566e-10,
+            "NH3": 2.686507732456346e-09,
+            "NNH": 7.555846436247736e-10,
+            "NO": 0.0018882057584039445,
+            "NO2": 3.462821660984315e-07,
+            "N2O": 1.0018737257298319e-07,
+            "HNO": 3.366350000255217e-08,
+            "CN": 6.77401280643941e-14,
+            "HCN": 1.9306510359766178e-11,
+            "H2CN": 5.477442653490742e-18,
+            "HCNN": 1.3166521853197862e-21,
+            "HCNO": 1.0202088043438375e-16,
+            "HOCN": 1.1311556694066024e-12,
+            "HNCO": 3.8646220948154227e-10,
+            "NCO": 1.54384017657139e-11,
+            "N2": 0.7085838214732277,
+            "AR": 0.0,
+            "C3H7": 3.540964399449664e-47,
+            "C3H8": 2.4283769432243877e-48,
+            "CH2CHO": 2.9528689969508445e-25,
+            "CH3CHO": 5.854759655782319e-26
+          }
+        }
+      },
+      "distribution_version": "3.1.0"
+    },
+    "chrono": {
+      "independently_run": true,
+      "integrated": true,
+      "sample_count": 1,
+      "last_sample": {
+        "schema_version": "1.0",
+        "module": "chrono",
+        "time_s": 1.000000000000001,
+        "step_s": 0.001,
+        "frame": "NED",
+        "units": "SI",
+        "position_m": [
+          0,
+          0,
+          4.908228324999943
+        ],
+        "velocity_m_s": [
+          0,
+          0,
+          9.80664999999985
+        ],
+        "mass_properties": {
+          "mass_kg": 2
+        }
+      }
+    },
+    "su2": {
+      "independently_run": true,
+      "integrated": true,
+      "sample_count": 1,
+      "last_sample": {
+        "schema_version": "1.0",
+        "module": "su2",
+        "time_s": 0.0,
+        "step_s": 0.0,
+        "frame": "NED",
+        "units": "SI",
+        "flow_analysis": {
+          "case": "uniform_2d_euler",
+          "iterations_recorded": 10,
+          "residuals_log10": {
+            "rms[Rho]": -14.18590838,
+            "rms[RhoU]": -11.83552354,
+            "rms[RhoV]": -11.83557709,
+            "rms[RhoE]": -8.666532186
+          }
+        }
+      }
+    }
+  },
+  "coupling": {
+    "source": "jsbsim",
+    "destination": "coolprop",
+    "samples": 100,
+    "verified": true,
+    "type": "one-way sequential data exchange; no feedback"
+  },
+  "pip_check_passed": true
+}

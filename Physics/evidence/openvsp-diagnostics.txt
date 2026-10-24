@@ -1,0 +1,20 @@
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+[ 10%] Building CXX object CMakeFiles/cpptest.dir/src/collectoroutput.cpp.o
+CMake Error at cmake/ConfigureCompiler.cmake:242 (message):
+  Could not set C Compiler flags!
+
+  Need to fix ConfigureCompiler.cmake to support AppleClang compiler!
+Call Stack (most recent call first):
+  CMakeLists.txt:36 (include)
+
+
+-- Configuring incomplete, errors occurred!
+make[2]: *** [CODEELI-prefix/src/CODEELI-stamp/CODEELI-configure] Error 1
+make[1]: *** [CMakeFiles/CODEELI.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 20%] Building CXX object CMakeFiles/cpptest.dir/src/compileroutput.cpp.o
+[ 47%] Built target DELABELLA
+make: *** [all] Error 2
+
+BLOCKED: Command '['cmake', '--build', '<PHYSICS>/build/openvsp-libraries', '--parallel', '4']' returned non-zero exit status 2.

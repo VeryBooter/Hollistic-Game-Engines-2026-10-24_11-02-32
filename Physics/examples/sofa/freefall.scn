@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- Real SOFA scene. UNVERIFIED until runSofa and these components build. NED gravity. -->
+<Node name="root" dt="0.001" gravity="0 0 9.80665">
+  <RequiredPlugin name="Sofa.Component.AnimationLoop"/>
+  <RequiredPlugin name="Sofa.Component.ODESolver.Forward"/>
+  <RequiredPlugin name="Sofa.Component.StateContainer"/>
+  <RequiredPlugin name="Sofa.Component.Mass"/>
+  <DefaultAnimationLoop/>
+  <EulerExplicitSolver/>
+  <MechanicalObject template="Vec3d" name="point" position="0 0 0"/>
+  <UniformMass totalMass="2"/>
+</Node>

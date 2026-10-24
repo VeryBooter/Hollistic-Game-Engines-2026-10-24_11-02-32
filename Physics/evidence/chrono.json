@@ -1,0 +1,23 @@
+[
+  {
+    "schema_version": "1.0",
+    "module": "chrono",
+    "time_s": 1.000000000000001,
+    "step_s": 0.001,
+    "frame": "NED",
+    "units": "SI",
+    "position_m": [
+      0,
+      0,
+      4.908228324999943
+    ],
+    "velocity_m_s": [
+      0,
+      0,
+      9.80664999999985
+    ],
+    "mass_properties": {
+      "mass_kg": 2
+    }
+  }
+]

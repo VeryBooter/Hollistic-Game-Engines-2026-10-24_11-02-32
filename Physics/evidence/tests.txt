@@ -1,0 +1,14 @@
+test_disabled_and_bad_dependency (test_integration.ContractTests) ... ok
+test_geometry_and_inertia (test_integration.ContractTests) ... ok
+test_handedness_for_force_and_torque (test_integration.ContractTests) ... ok
+test_reject_bad_units_negative_kelvin_and_nan (test_integration.ContractTests) ... ok
+test_timeout_stops_worker (test_integration.ContractTests) ... ok
+test_cantera_energy_conservation (test_integration.SolverTests) ... ok
+test_chrono_freefall (test_integration.SolverTests) ... ok
+test_real_atmosphere_exchange_and_perturbation (test_integration.SolverTests) ... ok
+test_su2_uniform_flow (test_integration.SolverTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 26.465s
+
+OK

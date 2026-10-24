@@ -1,0 +1,13 @@
+# CPython 3.10, macOS arm64 >= 14.0. Includes all runtime transitive dependencies.
+attrs==25.3.0 --hash=sha256:427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3
+cantera==3.1.0 --hash=sha256:3ba08af491868ecc01b637373f80c724ed00f6448532b783148e914c38d4ffb0
+coolprop==7.1.0 --hash=sha256:3bce20a73d9a1493d07e2cb885f858529fa793341d7c262542442e93be9e6d18
+jsbsim==1.2.3 --hash=sha256:af1f53a40f953ba18996b4416c9a7360534d8fdfbb80b9c7b8f34b4acac6aa5f
+jsonschema==4.23.0 --hash=sha256:fbadb6f8b144a8f8cf9f0b89ba94501d143e50411a1278633f56a7acf7fd5566
+jsonschema_specifications==2025.4.1 --hash=sha256:4653bffbd6584f7de83a67e0d620ef16900b390ddc7939d56684d6c81e33f1af
+numpy==2.2.6 --hash=sha256:37e990a01ae6ec7fe7fa1c26c55ecb672dd98b19c3d0e1d1f326fa13cb38d163
+referencing==0.36.2 --hash=sha256:e8699adbbf8b5c7de96d8ffa0eb5c158b3beafce084968e2ea8bb08c6794dcd0
+rpds_py==0.24.0 --hash=sha256:2d53747da70a4e4b17f559569d5f9506420966083a31c5fbd84e764461c4444b
+ruamel.yaml==0.18.10 --hash=sha256:30f22513ab2301b3d2b577adc121c6471f28734d3d9728581245f1e76468b4f1
+ruamel.yaml.clib==0.2.12 --hash=sha256:11f891336688faf5156a36293a9c362bdc7c88f03a8a027c2c1d8e0bcde998e5
+typing_extensions==4.13.2 --hash=sha256:a439e7c04b49fec3e5d3e2beaa21755cadbbdc391694e28ccdd36ca4a1408f8c

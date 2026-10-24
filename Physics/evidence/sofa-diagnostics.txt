@@ -1,0 +1,10 @@
+  Sofa/framework/Type/CMakeLists.txt:79 (sofa_find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Error at Sofa/framework/Type/CMakeLists.txt:88 (message):
+  Boost (1.54.0 or higher) is mandatory.
+
+
+-- Configuring incomplete, errors occurred!
+
+BLOCKED: Command '['cmake', '-S', '<PHYSICS>/external/sofa', '-B', '<PHYSICS>/build/sofa', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_C_COMPILER=/usr/bin/clang', '-DCMAKE_CXX_COMPILER=/usr/bin/clang++', '-DCMAKE_OSX_ARCHITECTURES=arm64', '-DCMAKE_POLICY_VERSION_MINIMUM=3.5', '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/sofa', '-DSOFA_BUILD_TESTS=OFF', '-DSOFA_BUILD_TUTORIALS=OFF', '-DSOFA_ALLOW_FETCH_DEPENDENCIES=OFF', '-DSOFA_WITH_OPENGL=OFF', '-DPLUGIN_SOFAGUIQT=OFF', '-DPLUGIN_SOFAGUIGLUT=OFF', '-DCMAKE_PREFIX_PATH=<PHYSICS>/install/eigen']' returned non-zero exit status 1.

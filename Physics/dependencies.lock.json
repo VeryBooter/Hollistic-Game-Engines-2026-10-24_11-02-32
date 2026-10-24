@@ -1,0 +1,116 @@
+{
+  "format": 1,
+  "target": "macOS-arm64",
+  "modules": {
+    "jsbsim": {
+      "repository": "https://github.com/JSBSim-Team/jsbsim.git",
+      "ref": "v1.2.3",
+      "commit": "570e8115a102df8f877b11e0e59b964ea483e3c0",
+      "license": "LGPL-2.1-or-later",
+      "mode": "realtime_candidate",
+      "source_dir": "external/jsbsim"
+    },
+    "chrono": {
+      "repository": "https://github.com/projectchrono/chrono.git",
+      "ref": "9.0.1",
+      "commit": "2617649bf687456328a122b63dc0bb64df91394a",
+      "license": "BSD-3-Clause",
+      "mode": "realtime_candidate",
+      "source_dir": "external/chrono"
+    },
+    "sofa": {
+      "repository": "https://github.com/sofa-framework/sofa.git",
+      "ref": "v24.12.00",
+      "commit": "23efcef14ddcd53278cade3e69d984cc6929939d",
+      "license": "LGPL-2.1-or-later (framework); GPL applications",
+      "mode": "realtime_candidate",
+      "source_dir": "external/sofa"
+    },
+    "moose": {
+      "repository": "https://github.com/idaholab/moose.git",
+      "ref": "2025-03-27-release",
+      "commit": "df029b7e4c9e4b491217693b694c1db999d3aeb0",
+      "license": "LGPL-2.1-only",
+      "mode": "offline",
+      "source_dir": "external/moose"
+    },
+    "su2": {
+      "repository": "https://github.com/su2code/SU2.git",
+      "ref": "v8.1.0",
+      "commit": "a991912e65f927ca9a500cb9600f88c3c739888f",
+      "license": "LGPL-2.1-or-later",
+      "mode": "offline",
+      "source_dir": "external/su2",
+      "patches": [
+        {
+          "file": "patches/su2-8.1.0-include.patch",
+          "sha256": "fd8171a52f614d377b5957ff5702637c8fd0cf514a1fca45c568d34e7a818062"
+        }
+      ]
+    },
+    "openvsp": {
+      "repository": "https://github.com/OpenVSP/OpenVSP.git",
+      "ref": "OpenVSP_3.42.3",
+      "commit": "df8e0e14d0031eeca8b619d89515a5f07555f4b6",
+      "license": "NASA-1.3; bundled components have separate licenses",
+      "mode": "offline",
+      "source_dir": "external/openvsp"
+    },
+    "radarsim": {
+      "repository": "https://github.com/radarsimx/radarsimpy.git",
+      "ref": "v14.0.0",
+      "commit": "e5ff4d307f3dc5193bc584d236ccdfceaeaa0996",
+      "license": "GPL-3.0 (Python wrapper); radarsimcpp source access required",
+      "mode": "offline",
+      "source_dir": "external/radarsim"
+    },
+    "fers": {
+      "repository": "https://github.com/stpaine/FERS.git",
+      "ref": "HEAD",
+      "commit": "f86c89fd7a507df423fd2a23f366fa0f9377ff81",
+      "license": "GPL-2.0-only",
+      "mode": "offline",
+      "source_dir": "external/fers"
+    },
+    "meep": {
+      "repository": "https://github.com/NanoComp/meep.git",
+      "ref": "v1.30.0",
+      "commit": "7a66b7f0d63a08790778c299aa3fc8b03abee2e7",
+      "license": "GPL-2.0-or-later",
+      "mode": "offline",
+      "source_dir": "external/meep"
+    },
+    "cantera": {
+      "repository": "https://github.com/Cantera/cantera.git",
+      "ref": "v3.1.0",
+      "commit": "6e0027548cf295bd478b8acfe34816f2db6dd58b",
+      "license": "BSD-3-Clause",
+      "mode": "offline",
+      "source_dir": "external/cantera"
+    },
+    "coolprop": {
+      "repository": "https://github.com/CoolProp/CoolProp.git",
+      "ref": "v7.1.0",
+      "commit": "a29eac7ff4408b6e707234baf9c1e7e0b35377a2",
+      "license": "MIT",
+      "mode": "offline",
+      "source_dir": "external/coolprop"
+    },
+    "precice": {
+      "repository": "https://github.com/precice/precice.git",
+      "ref": "v3.2.0",
+      "commit": "c5689fd74e952ac005ed92ba305819fbf7bdc364",
+      "license": "LGPL-3.0-or-later",
+      "mode": "offline",
+      "source_dir": "external/precice"
+    },
+    "eigen": {
+      "repository": "https://gitlab.com/libeigen/eigen.git",
+      "ref": "3.4.0",
+      "commit": "3147391d946bb4b6c68edd901f2add6ac1f31f8c",
+      "license": "MPL-2.0 (see COPYING.*)",
+      "mode": "build_dependency",
+      "source_dir": "external/eigen"
+    }
+  }
+}

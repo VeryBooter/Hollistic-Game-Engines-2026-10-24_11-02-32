@@ -1,0 +1,7 @@
+/.venv/
+/external/*/
+/build/
+/install/
+/artifacts/
+__pycache__/
+*.pyc

@@ -1,0 +1,11 @@
+diff --git a/SU2_CFD/src/interfaces/fsi/CFlowTractionInterface.cpp b/SU2_CFD/src/interfaces/fsi/CFlowTractionInterface.cpp
+--- a/SU2_CFD/src/interfaces/fsi/CFlowTractionInterface.cpp
++++ b/SU2_CFD/src/interfaces/fsi/CFlowTractionInterface.cpp
+@@ -31,6 +31,6 @@
+ #include "../../../../Common/include/geometry/CGeometry.hpp"
+ #include "../../../include/solvers/CSolver.hpp"
+ #include "../../../../Common/include/toolboxes/geometry_toolbox.hpp"
+-#include "../../../Common/include/interface_interpolation/CInterpolator.hpp"
++#include "../../../../Common/include/interface_interpolation/CInterpolator.hpp"
+ #include <unordered_set>
+ 

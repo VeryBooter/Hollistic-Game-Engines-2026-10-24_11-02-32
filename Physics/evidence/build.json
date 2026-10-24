@@ -1,0 +1,68 @@
+{
+  "chrono": {
+    "configured": true,
+    "built_from_source": true,
+    "log": "artifacts/logs/chrono-build.log",
+    "bridge_test_passed": true
+  },
+  "jsbsim": {
+    "configured": true,
+    "built_from_source": true,
+    "log": "artifacts/logs/jsbsim-build.log"
+  },
+  "eigen": {
+    "configured": true,
+    "built_from_source": true,
+    "log": "artifacts/logs/eigen-build.log"
+  },
+  "sofa": {
+    "configured": false,
+    "built_from_source": false,
+    "log": "artifacts/logs/sofa-build.log",
+    "error": "Command '['cmake', '-S', '<PHYSICS>/external/sofa', '-B', '<PHYSICS>/build/sofa', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_C_COMPILER=/usr/bin/clang', '-DCMAKE_CXX_COMPILER=/usr/bin/clang++', '-DCMAKE_OSX_ARCHITECTURES=arm64', '-DCMAKE_POLICY_VERSION_MINIMUM=3.5', '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/sofa', '-DSOFA_BUILD_TESTS=OFF', '-DSOFA_BUILD_TUTORIALS=OFF', '-DSOFA_ALLOW_FETCH_DEPENDENCIES=OFF', '-DSOFA_WITH_OPENGL=OFF', '-DPLUGIN_SOFAGUIQT=OFF', '-DPLUGIN_SOFAGUIGLUT=OFF', '-DCMAKE_PREFIX_PATH=<PHYSICS>/install/eigen']' returned non-zero exit status 1."
+  },
+  "precice": {
+    "configured": false,
+    "built_from_source": false,
+    "log": "artifacts/logs/precice-build.log",
+    "error": "Command '['cmake', '-S', '<PHYSICS>/external/precice', '-B', '<PHYSICS>/build/precice', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_C_COMPILER=/usr/bin/clang', '-DCMAKE_CXX_COMPILER=/usr/bin/clang++', '-DCMAKE_OSX_ARCHITECTURES=arm64', '-DCMAKE_POLICY_VERSION_MINIMUM=3.5', '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/precice', '-DPRECICE_FEATURE_MPI_COMMUNICATION=OFF', '-DPRECICE_FEATURE_PETSC_MAPPING=OFF', '-DPRECICE_FEATURE_PYTHON_ACTIONS=OFF', '-DBUILD_TESTING=OFF', '-DCMAKE_PREFIX_PATH=<PHYSICS>/install/eigen']' returned non-zero exit status 1."
+  },
+  "fers": {
+    "configured": false,
+    "built_from_source": false,
+    "log": "artifacts/logs/fers-build.log",
+    "error": "Command '['cmake', '-S', '<PHYSICS>/external/fers', '-B', '<PHYSICS>/build/fers', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_C_COMPILER=/usr/bin/clang', '-DCMAKE_CXX_COMPILER=/usr/bin/clang++', '-DCMAKE_OSX_ARCHITECTURES=arm64', '-DCMAKE_POLICY_VERSION_MINIMUM=3.5', '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/fers', '-DFERS_BUILD_TESTS=OFF']' returned non-zero exit status 1."
+  },
+  "moose": {
+    "configured": false,
+    "built_from_source": false,
+    "log": "artifacts/logs/moose-build.log",
+    "error": "mpicxx missing; install MOOSE-compatible MPI/PETSc/libMesh environment; see docs/MODULES.md"
+  },
+  "meep": {
+    "configured": false,
+    "built_from_source": false,
+    "log": "artifacts/logs/meep-build.log",
+    "error": "autoreconf missing; install Autotools, FFTW, HDF5, Guile, libctl, Harminv; see scripts/install-native.sh"
+  },
+  "radarsim": {
+    "configured": false,
+    "built_from_source": false,
+    "log": "artifacts/logs/radarsim-build.log",
+    "error": "Pinned v14.0.0 requires non-public git@github.com:rookiepeng/radarsimcpp.git; wrapper alone cannot simulate. Supply an authorized compatible backend distribution."
+  },
+  "su2": {
+    "configured": true,
+    "built_from_source": true,
+    "log": "artifacts/logs/su2-build.log",
+    "patches": [
+      "patches/su2-8.1.0-include.patch"
+    ]
+  },
+  "openvsp": {
+    "configured": false,
+    "built_from_source": false,
+    "log": "artifacts/logs/openvsp-build.log",
+    "error": "Command '['cmake', '--build', '<PHYSICS>/build/openvsp-libraries', '--parallel', '4']' returned non-zero exit status 2."
+  }
+}

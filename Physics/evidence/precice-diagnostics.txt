@@ -1,0 +1,19 @@
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+CMake Error at CMakeLists.txt:194 (find_package):
+  Could not find a package configuration file provided by "Boost" (requested
+  version 1.74.0) with any of the following names:
+
+    BoostConfig.cmake
+    boost-config.cmake
+
+  Add the installation prefix of "Boost" to CMAKE_PREFIX_PATH or set
+  "Boost_DIR" to a directory containing one of the above files.  If "Boost"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+-- Configuring incomplete, errors occurred!
+
+BLOCKED: Command '['cmake', '-S', '<PHYSICS>/external/precice', '-B', '<PHYSICS>/build/precice', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_C_COMPILER=/usr/bin/clang', '-DCMAKE_CXX_COMPILER=/usr/bin/clang++', '-DCMAKE_OSX_ARCHITECTURES=arm64', '-DCMAKE_POLICY_VERSION_MINIMUM=3.5', '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/precice', '-DPRECICE_FEATURE_MPI_COMMUNICATION=OFF', '-DPRECICE_FEATURE_PETSC_MAPPING=OFF', '-DPRECICE_FEATURE_PYTHON_ACTIONS=OFF', '-DBUILD_TESTING=OFF', '-DCMAKE_PREFIX_PATH=<PHYSICS>/install/eigen']' returned non-zero exit status 1.

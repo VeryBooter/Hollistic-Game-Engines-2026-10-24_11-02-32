@@ -1,0 +1,2 @@
+
+BLOCKED: mpicxx missing; install MOOSE-compatible MPI/PETSc/libMesh environment; see docs/MODULES.md
