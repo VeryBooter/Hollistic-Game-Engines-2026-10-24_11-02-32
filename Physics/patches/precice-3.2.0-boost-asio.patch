@@ -1,0 +1,30 @@
+diff --git a/src/com/SocketCommunication.cpp b/src/com/SocketCommunication.cpp
+index ff7c431..c04cc55 100644
+--- a/src/com/SocketCommunication.cpp
++++ b/src/com/SocketCommunication.cpp
+@@ -1,5 +1,7 @@
+ #include <algorithm>
+ #include <boost/asio.hpp>
++#include <boost/asio/steady_timer.hpp>
++#include <chrono>
+ 
+ #include <filesystem>
+ #include <sstream>
+@@ -236,7 +238,7 @@ void SocketCommunication::requestConnection(std::string const &acceptorName,
+       if (not isConnected()) {
+         // Wait a little, since after a couple of ten-thousand trials the system
+         // seems to get confused and the requester connects wrongly to itself.
+-        boost::asio::deadline_timer timer(*_ioContext, boost::posix_time::milliseconds(1));
++        boost::asio::steady_timer timer(*_ioContext, std::chrono::milliseconds(1));
+         timer.wait();
+       }
+     }
+@@ -300,7 +302,7 @@ void SocketCommunication::requestConnectionAsClient(std::string const   &accepto
+         if (not isConnected()) {
+           // Wait a little, since after a couple of ten-thousand trials the system
+           // seems to get confused and the requester connects wrongly to itself.
+-          boost::asio::deadline_timer timer(*_ioContext, boost::posix_time::milliseconds(1));
++          boost::asio::steady_timer timer(*_ioContext, std::chrono::milliseconds(1));
+           timer.wait();
+         }
+       }

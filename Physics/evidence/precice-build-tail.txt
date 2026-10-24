@@ -1,65 +1,65 @@
-   preCICE offers in addition to the core library a variety of tools in order to check configuration
-   files or generate xml references. The tools are compiled into an executable called "precice-tools".
-
-   This feature can be enabled/disabled by setting the PRECICE_BUILD_TOOLS CMake option.
-  
-
--- === DISABLED FEATURES ===
- * PRECICE_FEATURE_MPI_COMMUNICATION, Enables the MPI communication back-end.
-
-   This enables the MPI communication back-end which is highly recommended on multi-node systems.
-   See the documentation of the CMake module FindMPI to control its functionality.
-
-   This feature can be enabled/disabled by setting the PRECICE_FEATURE_MPI_COMMUNICATION CMake option.
-
- * PRECICE_FEATURE_PETSC_MAPPING, Enables the PETSc-powered radial basic function mappings.
-
-   This enables the PETSc-based variant of radial basis function mappings which can run in parallel,
-   also across different compute nodes. This is highly recommended for large cases running in parallel.
-
-   This feature can be enabled/disabled by setting the PRECICE_FEATURE_PETSC_MAPPING CMake option.
-   Requires PRECICE_FEATURE_MPI_COMMUNICATION.
-  
- * PRECICE_FEATURE_GINKGO_MAPPING, Enables the Ginkgo backend which supports the usage of GPUs and OpenMP for (global) radial-basis function mappings.
-
-   Currently, this enables radial-basis function mappings to leverage the compute power of Nvidia/AMD GPUs and OpenMP.
-   It uses iterative solvers provided by Ginkgo or direct solvers offered by hip/cuSolver.
-
-   This feature can be enabled/disabled by setting the PRECICE_FEATURE_GINKGO_MAPPING CMake option.
-   Requires the Ginkgo library, Kokkos (v4.1 or higher) and Eigen 3.4.
-  
- * PRECICE_FEATURE_PYTHON_ACTIONS, Enables the support for user-defined python actions.
-
-   preCICE allows to manipulate coupling data at runtime using configurable actions.
-   This feature enables the support for user-defined actions written in Python based on numpy.
-
-   This feature can be enabled/disabled by setting the PRECICE_FEATURE_PYTHON_ACTIONS CMake option.
-  
- * PRECICE_FEATURE_LIBBACKTRACE_STACKTRACES, Enables libbacktrace for stracktrace generation.
-
-   preCICE assertions are helpful during development, however, the default stacktraces may not be sufficient.
-   This feature enables the support for libbacktrace in boost.stacktrace.
-
-   This feature can be enabled/disabled by setting the PRECICE_FEATURE_LIBBACKTRACE_STACKTRACES CMake option.
-  
-
--- === DEPENDENCIES ===
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
--- Found Threads: TRUE
-CMake Error at CMakeLists.txt:194 (find_package):
-  Could not find a package configuration file provided by "Boost" (requested
-  version 1.74.0) with any of the following names:
-
-    BoostConfig.cmake
-    boost-config.cmake
-
-  Add the installation prefix of "Boost" to CMAKE_PREFIX_PATH or set
-  "Boost_DIR" to a directory containing one of the above files.  If "Boost"
-  provides a separate development package or SDK, be sure it has been
-  installed.
-
-
--- Configuring incomplete, errors occurred!
-
-BLOCKED: Command '['cmake', '-S', '<PHYSICS>/external/precice', '-B', '<PHYSICS>/build/precice', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_C_COMPILER=/usr/bin/clang', '-DCMAKE_CXX_COMPILER=/usr/bin/clang++', '-DCMAKE_OSX_ARCHITECTURES=arm64', '-DCMAKE_POLICY_VERSION_MINIMUM=3.5', '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/precice', '-DPRECICE_FEATURE_MPI_COMMUNICATION=OFF', '-DPRECICE_FEATURE_PETSC_MAPPING=OFF', '-DPRECICE_FEATURE_PYTHON_ACTIONS=OFF', '-DBUILD_TESTING=OFF', '-DCMAKE_PREFIX_PATH=<PHYSICS>/install/eigen']' returned non-zero exit status 1.
+[ 23%] Building CXX object CMakeFiles/preciceCore.dir/Unity/unity_time_cxx.cxx.o
+[ 26%] Building CXX object CMakeFiles/preciceCore.dir/Unity/unity_xml_cxx.cxx.o
+[ 30%] Building CXX object CMakeFiles/preciceCore.dir/Unity/unity_io_cxx.cxx.o
+[ 34%] Building CXX object CMakeFiles/preciceCore.dir/Unity/unity_mapping_cxx.cxx.o
+[ 38%] Building CXX object CMakeFiles/preciceCore.dir/Unity/unity_logging_cxx.cxx.o
+[ 42%] Building CXX object CMakeFiles/preciceCore.dir/Unity/unity_mesh_cxx.cxx.o
+[ 46%] Building CXX object CMakeFiles/preciceCore.dir/Unity/unity_partition_cxx.cxx.o
+[ 50%] Building CXX object CMakeFiles/preciceCore.dir/Unity/unity_precice_cxx.cxx.o
+[ 53%] Building CXX object CMakeFiles/preciceCore.dir/Unity/unity_profiling_cxx.cxx.o
+[ 57%] Building CXX object CMakeFiles/preciceCore.dir/Unity/unity_query_cxx.cxx.o
+[ 61%] Building CXX object CMakeFiles/preciceCore.dir/Unity/unity_utils_cxx.cxx.o
+[ 65%] Building CXX object CMakeFiles/preciceCore.dir/src/precice/impl/versions.cpp.o
+[ 69%] Building CXX object CMakeFiles/preciceCore.dir/extras/bindings/c/src/preciceC.cpp.o
+[ 73%] Building CXX object CMakeFiles/preciceCore.dir/extras/bindings/fortran/src/preciceFortran.cpp.o
+[ 88%] Built target preciceCore
+[ 92%] Linking CXX shared library libprecice.dylib
+[ 92%] Built target precice
+[ 96%] Building CXX object CMakeFiles/precice-tools.dir/src/drivers/main.cpp.o
+[100%] Linking CXX executable precice-tools
+[100%] Built target precice-tools
+$ cmake --install '<PHYSICS>/build/precice'
+-- Install configuration: "Release"
+-- Installing: <PHYSICS>/install/precice/lib/libprecice.3.2.0.dylib
+-- Installing: <PHYSICS>/install/precice/lib/libprecice.3.dylib
+-- Installing: <PHYSICS>/install/precice/lib/libprecice.dylib
+-- Installing: <PHYSICS>/install/precice/include/precice/Version.h
+-- Installing: <PHYSICS>/install/precice/include/precice/Exceptions.hpp
+-- Installing: <PHYSICS>/install/precice/include/precice/Participant.hpp
+-- Installing: <PHYSICS>/install/precice/include/precice/Tooling.hpp
+-- Installing: <PHYSICS>/install/precice/include/precice/Types.hpp
+-- Installing: <PHYSICS>/install/precice/include/precice/precice.hpp
+-- Installing: <PHYSICS>/install/precice/include/precice/span.hpp
+-- Installing: <PHYSICS>/install/precice/include/precice/export.h
+-- Installing: <PHYSICS>/install/precice/include/precice/preciceC.h
+-- Installing: <PHYSICS>/install/precice/include/precice/preciceFortran.hpp
+-- Installing: <PHYSICS>/install/precice/bin/precice-tools
+-- Installing: <PHYSICS>/install/precice/bin/precice-profiling
+-- Installing: <PHYSICS>/install/precice/share/precice/examples
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/precice-config.xml
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/README.md
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/cpp
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/cpp/CMakeLists.txt
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/cpp/solverdummy.cpp
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/cpp/README.md
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/cpp/test.cmake
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/fortran
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/fortran/CMakeLists.txt
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/fortran/solverdummy.f90
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/fortran/README.md
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/c
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/c/CMakeLists.txt
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/c/README.md
+-- Installing: <PHYSICS>/install/precice/share/precice/examples/solverdummies/c/solverdummy.c
+-- Installing: <PHYSICS>/install/precice/lib/cmake/precice/preciceTargets.cmake
+-- Installing: <PHYSICS>/install/precice/lib/cmake/precice/preciceTargets-release.cmake
+-- Installing: <PHYSICS>/install/precice/lib/cmake/precice/preciceConfig.cmake
+-- Installing: <PHYSICS>/install/precice/lib/cmake/precice/preciceConfigVersion.cmake
+-- Installing: <PHYSICS>/install/precice/share/man/man1
+-- Installing: <PHYSICS>/install/precice/share/man/man1/precice-tools.1.gz
+-- Installing: <PHYSICS>/install/precice/lib/pkgconfig
+-- Installing: <PHYSICS>/install/precice/lib/pkgconfig/libprecice.pc
+-- Installing: <PHYSICS>/install/precice/share/doc/libprecice3/copyright
+-- Installing: <PHYSICS>/install/precice/share/lintian/overrides/libprecice3
+-- Installing: <PHYSICS>/install/precice/share/doc/libprecice3/changelog.gz

@@ -11,9 +11,8 @@
   },
   "sofa": {
     "mode": "realtime_candidate",
-    "enabled": false,
-    "adapter": "external_process",
-    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+    "enabled": true,
+    "adapter": "native_process"
   },
   "moose": {
     "mode": "offline",
@@ -27,10 +26,9 @@
     "adapter": "native_process"
   },
   "openvsp": {
+    "enabled": true,
     "mode": "offline",
-    "enabled": false,
-    "adapter": "external_process",
-    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+    "adapter": "native_process"
   },
   "radarsim": {
     "mode": "offline",
@@ -39,16 +37,14 @@
     "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
   },
   "fers": {
+    "enabled": true,
     "mode": "offline",
-    "enabled": false,
-    "adapter": "external_process",
-    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+    "adapter": "native_process"
   },
   "meep": {
+    "enabled": true,
     "mode": "offline",
-    "enabled": false,
-    "adapter": "external_process",
-    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+    "adapter": "native_process"
   },
   "cantera": {
     "mode": "offline",
@@ -62,8 +58,7 @@
   },
   "precice": {
     "mode": "offline",
-    "enabled": false,
-    "adapter": "external_process",
-    "reason": "Native dependencies/build and solver-specific output parser not yet validated; see docs/MODULES.md"
+    "enabled": true,
+    "adapter": "native_process"
   }
 }

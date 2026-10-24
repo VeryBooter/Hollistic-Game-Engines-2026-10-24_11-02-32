@@ -254,6 +254,182 @@
           }
         }
       }
+    },
+    "coupling_analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "participants",
+        "time_windows",
+        "final_time",
+        "status"
+      ],
+      "properties": {
+        "participants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2
+        },
+        "time_windows": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "final_time": {
+          "type": "number",
+          "minimum": 0
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "aero_analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "case",
+        "mach",
+        "alpha_deg",
+        "beta_deg",
+        "lift_coefficient",
+        "drag_coefficient"
+      ],
+      "properties": {
+        "case": {
+          "type": "string"
+        },
+        "mach": {
+          "type": "number"
+        },
+        "alpha_deg": {
+          "type": "number"
+        },
+        "beta_deg": {
+          "type": "number"
+        },
+        "lift_coefficient": {
+          "type": "number"
+        },
+        "drag_coefficient": {
+          "type": "number"
+        },
+        "side_force_coefficient": {
+          "type": "number"
+        },
+        "pitch_moment_coefficient": {
+          "type": "number"
+        },
+        "lift_over_drag": {
+          "type": "number"
+        }
+      }
+    },
+    "radar_analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scenario_name",
+        "start_time_s",
+        "end_time_s",
+        "sampling_rate_hz",
+        "files"
+      ],
+      "properties": {
+        "scenario_name": {
+          "type": "string"
+        },
+        "start_time_s": {
+          "type": "number"
+        },
+        "end_time_s": {
+          "type": "number"
+        },
+        "sampling_rate_hz": {
+          "type": "number"
+        },
+        "total_samples": {
+          "type": "integer"
+        },
+        "chirp_count": {
+          "type": "integer"
+        },
+        "carrier_frequency_hz": {
+          "type": "number"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "em_analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "solver",
+        "dimension",
+        "timesteps",
+        "components",
+        "field_statistics"
+      ],
+      "properties": {
+        "solver": {
+          "type": "string"
+        },
+        "dimension": {
+          "type": "integer"
+        },
+        "resolution": {
+          "type": "number"
+        },
+        "meep_time": {
+          "type": "number"
+        },
+        "timesteps": {
+          "type": "integer"
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "field_statistics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "max_abs_field",
+            "mean_field"
+          ],
+          "properties": {
+            "max_abs_field": {
+              "type": "number"
+            },
+            "min_field": {
+              "type": "number"
+            },
+            "max_field": {
+              "type": "number"
+            },
+            "mean_field": {
+              "type": "number"
+            },
+            "rms_field": {
+              "type": "number"
+            }
+          }
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
     }
   },
   "required": [

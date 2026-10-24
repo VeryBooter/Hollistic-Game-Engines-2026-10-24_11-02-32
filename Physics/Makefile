@@ -14,6 +14,11 @@ examples:
 	$(PYTHON) -m physim run cantera --output artifacts/cantera.json
 	$(PYTHON) -m physim run chrono --output artifacts/chrono.json
 	$(PYTHON) -m physim run su2 --output artifacts/su2.json
+	$(PYTHON) -m physim run sofa --output artifacts/sofa.json
+	$(PYTHON) -m physim run precice --output artifacts/precice.json
+	$(PYTHON) -m physim run openvsp --output artifacts/openvsp.json
+	$(PYTHON) -m physim run fers --output artifacts/fers.json
+	$(PYTHON) -m physim run meep --output artifacts/meep.json
 verify:
 	$(PYTHON) scripts/verify.py
 list:

@@ -53,23 +53,62 @@ def build(name, configure_only=False, jobs=4):
             elif name == 'sofa':
                 cmake(['-DSOFA_BUILD_TESTS=OFF', '-DSOFA_BUILD_TUTORIALS=OFF',
                        '-DSOFA_ALLOW_FETCH_DEPENDENCIES=OFF', '-DSOFA_WITH_OPENGL=OFF',
-                       '-DPLUGIN_SOFAGUIQT=OFF', '-DPLUGIN_SOFAGUIGLUT=OFF',
+                       '-DPLUGIN_SOFA_GUI_QT=OFF', '-DPLUGIN_SOFAMATRIX=OFF',
                        '-DCMAKE_PREFIX_PATH=' + str(ROOT / 'install/eigen')])
             elif name == 'precice':
+                if 'patches' in LOCK[name]:
+                    for patch_lock in LOCK[name]['patches']:
+                        patch = ROOT / patch_lock['file']
+                        if hashlib.sha256(patch.read_bytes()).hexdigest() != patch_lock['sha256']:
+                            raise RuntimeError(f'{name} patch differs from dependency lock: {patch}')
+                        check = subprocess.run(['git', 'apply', '--reverse', '--check', str(patch)],
+                                               cwd=src, stdout=stream, stderr=stream)
+                        if check.returncode:
+                            run(['git', 'apply', '--check', patch], cwd=src)
+                            run(['git', 'apply', patch], cwd=src)
+                    state['patches'] = [p['file'] for p in LOCK[name]['patches']]
                 cmake(['-DPRECICE_FEATURE_MPI_COMMUNICATION=OFF', '-DPRECICE_FEATURE_PETSC_MAPPING=OFF',
                        '-DPRECICE_FEATURE_PYTHON_ACTIONS=OFF', '-DBUILD_TESTING=OFF',
+                       '-DCMAKE_INSTALL_RPATH=' + str(prefix / 'lib'),
+                       '-DCMAKE_INSTALL_NAME_DIR=' + str(prefix / 'lib'),
                        '-DCMAKE_PREFIX_PATH=' + str(ROOT / 'install/eigen')])
             elif name == 'openvsp':
-                libs = ROOT / 'build/openvsp-libraries'
-                cmake(['-DVSP_NO_GRAPHICS=ON', '-DVSP_NO_API_WRAPPERS=ON'], source=src / 'Libraries', binary=libs)
+                libs = ROOT / 'build/vspaero-libraries'
+                cmake(['-DCMAKE_POLICY_VERSION_MINIMUM=3.5'], source=src / 'src/vsp_aero/StandAlone/Libraries', binary=libs)
                 if configure_only:
                     state['configured'] = True
-                    state['scope'] = 'bundled Libraries configure only, not OpenVSP application'
+                    state['scope'] = 'VSPAERO StandAlone libraries configured'
                     return state
                 run(['cmake', '--build', libs, '--parallel', jobs])
-                cmake(['-DVSP_LIBRARY_PATH=' + str(libs), '-DVSP_NO_GRAPHICS=ON', '-DVSP_NO_API_WRAPPERS=ON'])
+                cmake(['-DVSPAERO_LIBRARY_PATH=' + str(libs), '-DCMAKE_POLICY_VERSION_MINIMUM=3.5',
+                       '-DCMAKE_INSTALL_PREFIX=' + str(prefix)],
+                      source=src / 'src/vsp_aero/StandAlone', binary=out)
+                state['configured'] = True
+                run(['cmake', '--build', out, '--parallel', jobs])
+                run(['cmake', '--install', out, '--prefix', str(prefix)])
+                bin_dir = prefix / 'bin'
+                bin_dir.mkdir(parents=True, exist_ok=True)
+                for exe in ['vspaero', 'vspaero_complex', 'vspaero_adjoint', 'vspaero_opt', 'vsploads']:
+                    if (prefix / exe).is_file():
+                        shutil.copy2(prefix / exe, bin_dir / exe)
+                state['built_from_source'] = True
+                return state
             elif name == 'fers':
-                cmake(['-DFERS_BUILD_TESTS=OFF'])
+                vcpkg_candidates = [
+                    ROOT / 'build/vcpkg',
+                    Path(os.environ.get('VCPKG_ROOT', '')) if os.environ.get('VCPKG_ROOT') else None,
+                    Path.home() / 'vcpkg'
+                ]
+                vcpkg_toolchain = None
+                for cand in vcpkg_candidates:
+                    if cand and (cand / 'scripts/buildsystems/vcpkg.cmake').is_file():
+                        vcpkg_toolchain = cand / 'scripts/buildsystems/vcpkg.cmake'
+                        break
+                if not vcpkg_toolchain:
+                    raise RuntimeError('vcpkg toolchain not found; clone and bootstrap vcpkg at build/vcpkg')
+                cmake(['-DFERS_BUILD_TESTS=OFF',
+                       '-DCMAKE_TOOLCHAIN_FILE=' + str(vcpkg_toolchain),
+                       '-DVCPKG_TARGET_TRIPLET=arm64-osx'])
             elif name == 'su2':
                 if not (src / 'externals/meson/mesonbuild').is_dir():
                     raise RuntimeError('Missing pinned gitlinks: run scripts/deps.py submodules su2')
@@ -105,7 +144,21 @@ def build(name, configure_only=False, jobs=4):
             elif name == 'meep':
                 if not shutil.which('autoreconf'):
                     raise RuntimeError('autoreconf missing; install Autotools, FFTW, HDF5, Guile, libctl, Harminv; see scripts/install-native.sh')
-                run(['sh', 'autogen.sh', '--prefix=' + str(prefix), '--without-mpi'], cwd=src)
+                env.update({
+                    'PATH': f"/tmp/libctl-install/bin:{env.get('PATH', '')}",
+                    'CPPFLAGS': "-I/tmp/libctl-install/include -I/tmp/harminv-install/include -I/opt/homebrew/include",
+                    'LDFLAGS': "-L/tmp/libctl-install/lib -L/tmp/harminv-install/lib -L/opt/homebrew/lib",
+                    'PKG_CONFIG_PATH': f"/tmp/harminv-install/lib/pkgconfig:/opt/homebrew/lib/pkgconfig:{env.get('PKG_CONFIG_PATH', '')}"
+                })
+                cfg_cmd = ['./configure', '--enable-maintainer-mode', f'--prefix={prefix}',
+                           '--without-mpi', '--without-python']
+                if Path('/tmp/libctl-install/share/libctl').exists():
+                    cfg_cmd.append('--with-libctl=/tmp/libctl-install/share/libctl')
+                elif (ROOT / 'install/meep/share/libctl').exists():
+                    cfg_cmd.append(f"--with-libctl={ROOT / 'install/meep/share/libctl'}")
+                if not (src / 'configure').is_file():
+                    run(['sh', 'autogen.sh'], cwd=src)
+                run(cfg_cmd, cwd=src)
                 state['configured'] = True
                 if not configure_only:
                     run(['make', '-j', jobs], cwd=src)
@@ -126,6 +179,12 @@ def build(name, configure_only=False, jobs=4):
                     run(['cmake', '--build', bridge, '--parallel', jobs])
                     run(['ctest', '--test-dir', bridge, '--output-on-failure'])
                     state['bridge_test_passed'] = True
+                if name == 'precice':
+                    dummy_dir = ROOT / 'build/precice-solverdummy'
+                    cmake(['-Dprecice_DIR=' + str(prefix / 'lib/cmake/precice')],
+                          source=src / 'examples/solverdummies/cpp', binary=dummy_dir)
+                    run(['cmake', '--build', dummy_dir, '--parallel', jobs])
+                    state['solverdummy_built'] = True
         except (RuntimeError, subprocess.SubprocessError, OSError) as exc:
             state['error'] = str(exc)
             stream.write('\nBLOCKED: ' + str(exc) + '\n')

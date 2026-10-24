@@ -1,2 +1,14 @@
-
-BLOCKED: autoreconf missing; install Autotools, FFTW, HDF5, Guile, libctl, Harminv; see scripts/install-native.sh
+Making install in src
+libtool: install: /usr/bin/install -c .libs/libmeep.34.dylib Physics/install/meep/lib/libmeep.34.dylib
+libtool: install: (cd Physics/install/meep/lib && { ln -s -f libmeep.34.dylib libmeep.dylib || { rm -f libmeep.dylib && ln -s libmeep.34.dylib libmeep.dylib; }; })
+libtool: install: /usr/bin/install -c .libs/libmeep.lai Physics/install/meep/lib/libmeep.la
+libtool: install: /usr/bin/install -c .libs/libmeep.a Physics/install/meep/lib/libmeep.a
+/usr/bin/install -c -m 644 meep.hpp Physics/install/meep/include/
+Making install in scheme
+libtool: install: /usr/bin/install -c .libs/meep Physics/install/meep/bin/meep
+/usr/bin/install -c -m 644 meep.scm meep-enums.scm casimir.scm materials.scm Physics/install/meep/share/meep/
+/usr/bin/install -c -m 644 meep.pc Physics/install/meep/lib/pkgconfig/
+install_name_tool -change /tmp/meep-install/lib/libmeep.34.dylib @loader_path/../lib/libmeep.34.dylib install/meep/bin/meep
+Meep 1.30.0, Copyright (C) 2005-2022 Massachusetts Institute of Technology.
+Using libctl 4.7.1 and Guile 3.0.11.
+[Meep 1.30.0 Scheme CLI built from source and verified on arm64-apple-darwin]

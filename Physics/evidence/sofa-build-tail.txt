@@ -1,33 +1,65 @@
-$ cmake -S '<PHYSICS>/external/sofa' -B '<PHYSICS>/build/sofa' -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_POLICY_VERSION_MINIMUM=3.5 '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/sofa' -DSOFA_BUILD_TESTS=OFF -DSOFA_BUILD_TUTORIALS=OFF -DSOFA_ALLOW_FETCH_DEPENDENCIES=OFF -DSOFA_WITH_OPENGL=OFF -DPLUGIN_SOFAGUIQT=OFF -DPLUGIN_SOFAGUIGLUT=OFF '-DCMAKE_PREFIX_PATH=<PHYSICS>/install/eigen'
--- The C compiler identification is AppleClang 17.0.0.17000603
--- The CXX compiler identification is AppleClang 17.0.0.17000603
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /usr/bin/clang - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/clang++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Precompiled headers: disabled (SOFA_BUILD_WITH_PCH_ENABLED is OFF).
--- Install prefix: <PHYSICS>/install/sofa
--- Adding library Sofa.Config
--- Adding library Sofa.Type
-CMake Warning (dev) at Sofa/framework/Config/cmake/SofaMacrosConfigure.cmake:390 (find_package):
-  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
-  --help-policy CMP0167" for policy details.  Use the cmake_policy command to
-  set the policy and suppress this warning.
-
-Call Stack (most recent call first):
-  Sofa/framework/Type/CMakeLists.txt:79 (sofa_find_package)
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
-CMake Error at Sofa/framework/Type/CMakeLists.txt:88 (message):
-  Boost (1.54.0 or higher) is mandatory.
-
-
--- Configuring incomplete, errors occurred!
-
-BLOCKED: Command '['cmake', '-S', '<PHYSICS>/external/sofa', '-B', '<PHYSICS>/build/sofa', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_C_COMPILER=/usr/bin/clang', '-DCMAKE_CXX_COMPILER=/usr/bin/clang++', '-DCMAKE_OSX_ARCHITECTURES=arm64', '-DCMAKE_POLICY_VERSION_MINIMUM=3.5', '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/sofa', '-DSOFA_BUILD_TESTS=OFF', '-DSOFA_BUILD_TUTORIALS=OFF', '-DSOFA_ALLOW_FETCH_DEPENDENCIES=OFF', '-DSOFA_WITH_OPENGL=OFF', '-DPLUGIN_SOFAGUIQT=OFF', '-DPLUGIN_SOFAGUIGLUT=OFF', '-DCMAKE_PREFIX_PATH=<PHYSICS>/install/eigen']' returned non-zero exit status 1.
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/chainHybrid.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/chainHybridNoGroup.scn.view
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/chainAll.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/collisionMultiple.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/2d_explicit.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/SofaWasher.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/liver.scn.view
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/caduceus.scn.qglviewer.view
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/collisionMultiple.scn.view
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/simpleSphere.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/skybox.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/2d.scn.view
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/liver.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/liverConfiguration.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/fallingBeamLagrangianCollision.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/collisionMultipleMask.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/chainAll.scn.view
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/simpleBoundaryConditions.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/caduceus_penalty.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/2d.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Coil.scn.view
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/TriangleSurfaceCutting.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/chainHybridNoGroup.html
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/rigidifiedSectionsInBeam.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/sofa_1000PR.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/TriangleSurfaceCutting.scn.view
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/include_test.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/chainHybridNoGroup.scn_0001.png
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/chainHybrid.scn.view
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/dentalSurgeryLCP.scn.view
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/dentalSurgeryDistanceGrid.scn.view
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/skull_and_teeth.obj
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/tooth_coarse_mesh.obj
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/tooth-closed.obj
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/dental_instrument.obj
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/teeth.obj
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/skull_and_teeth_coarse.mtl
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/skull_and_teeth_coarse.obj
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/tooth_coarse_mesh.mtl
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/skull_and_teeth.mtl
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/dental_instrument_centerline.obj
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/dental_instrument.mtl
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Dentistry/data/mesh/tooth-128.fmesh
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/Coil.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/simpleBoundaryConditions.html
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/fallingBeamAugmentedLagrangianCollision.scn
+-- Installing: <PHYSICS>/install/sofa/share/sofa/examples/Demos/include_test.xml
+-- Installing: <PHYSICS>/install/sofa/share/sofa/sofa-launcher
+-- Installing: <PHYSICS>/install/sofa/share/sofa/sofa-launcher/integration_example.py
+-- Installing: <PHYSICS>/install/sofa/share/sofa/sofa-launcher/example.json
+-- Installing: <PHYSICS>/install/sofa/share/sofa/sofa-launcher/sofa-launcher.py
+-- Installing: <PHYSICS>/install/sofa/share/sofa/sofa-launcher/README.md
+-- Installing: <PHYSICS>/install/sofa/share/sofa/sofa-launcher/example.py
+-- Installing: <PHYSICS>/install/sofa/share/sofa/sofa-launcher/results.html
+-- Installing: <PHYSICS>/install/sofa/share/sofa/sofa-launcher/launcher.py
+-- Installing: <PHYSICS>/install/sofa/share/sofa/sofa-launcher/results.thtml
+-- Installing: <PHYSICS>/install/sofa/share/sofa/sofa-launcher/example.scn
+-- Up-to-date: <PHYSICS>/install/sofa/plugins
+-- Installing: <PHYSICS>/install/sofa/plugins/README.txt
+-- Installing: <PHYSICS>/install/sofa/collections
+-- Installing: <PHYSICS>/install/sofa/collections/README.txt
+-- Found Git: /usr/bin/git (found version "2.50.1 (Apple Git-155)")

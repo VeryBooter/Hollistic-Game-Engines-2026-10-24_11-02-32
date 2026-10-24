@@ -191,6 +191,136 @@
           }
         }
       }
+    },
+    "sofa": {
+      "independently_run": true,
+      "integrated": true,
+      "sample_count": 10,
+      "last_sample": {
+        "schema_version": "1.0",
+        "module": "sofa",
+        "time_s": 0.009,
+        "step_s": 0.001,
+        "frame": "NED",
+        "units": "SI",
+        "position_m": [
+          0.0,
+          0.0,
+          0.000441299
+        ],
+        "mass_properties": {
+          "mass_kg": 2.0
+        },
+        "velocity_m_s": [
+          0.0,
+          0.0,
+          0.0882599
+        ]
+      }
+    },
+    "precice": {
+      "independently_run": true,
+      "integrated": true,
+      "sample_count": 1,
+      "last_sample": {
+        "schema_version": "1.0",
+        "module": "precice",
+        "time_s": 2.0,
+        "step_s": 1.0,
+        "frame": "NED",
+        "units": "SI",
+        "coupling_analysis": {
+          "participants": [
+            "SolverOne",
+            "SolverTwo"
+          ],
+          "time_windows": 2,
+          "final_time": 2.0,
+          "status": "completed"
+        }
+      }
+    },
+    "openvsp": {
+      "independently_run": true,
+      "integrated": true,
+      "sample_count": 1,
+      "last_sample": {
+        "schema_version": "1.0",
+        "module": "openvsp",
+        "time_s": 0.0,
+        "step_s": 0.0,
+        "frame": "NED",
+        "units": "SI",
+        "aero_analysis": {
+          "case": "hershey",
+          "mach": 0.11,
+          "alpha_deg": 5.0,
+          "beta_deg": 0.0,
+          "lift_coefficient": 0.425394557944,
+          "drag_coefficient": 0.01584644236,
+          "side_force_coefficient": 8.98519e-07,
+          "pitch_moment_coefficient": -0.105869957309,
+          "lift_over_drag": 26.844798868958
+        }
+      }
+    },
+    "fers": {
+      "independently_run": true,
+      "integrated": true,
+      "sample_count": 1,
+      "last_sample": {
+        "schema_version": "1.0",
+        "module": "fers",
+        "time_s": 0.064,
+        "step_s": 0.064,
+        "frame": "NED",
+        "units": "SI",
+        "radar_analysis": {
+          "scenario_name": "FmcwMonostaticPhysicalDechirpScenario",
+          "start_time_s": 0.0,
+          "end_time_s": 0.064,
+          "sampling_rate_hz": 2000000.0,
+          "total_samples": 128001,
+          "chirp_count": 64,
+          "carrier_frequency_hz": 10000000000.0,
+          "files": [
+            "/var/folders/ly/z82phh7x7fj0zhl_4kkkct740000gn/T/physim-fers-ykvjst4v/MonoFmcwRadar_results.h5"
+          ]
+        }
+      }
+    },
+    "meep": {
+      "independently_run": true,
+      "integrated": true,
+      "sample_count": 1,
+      "last_sample": {
+        "schema_version": "1.0",
+        "module": "meep",
+        "time_s": 6.671281903963041e-14,
+        "step_s": 8.339102379953801e-17,
+        "frame": "NED",
+        "units": "SI",
+        "em_analysis": {
+          "solver": "meep-1.30.0",
+          "dimension": 3,
+          "resolution": 20.0,
+          "meep_time": 20.0,
+          "timesteps": 800,
+          "components": [
+            "ex"
+          ],
+          "field_statistics": {
+            "max_abs_field": 0.00642174,
+            "min_field": -0.00642174,
+            "max_field": 0.00426865,
+            "mean_field": -4.3771790549999986e-05,
+            "rms_field": 0.001794257480920205
+          },
+          "files": [
+            "pulse-ex-000020.00.h5"
+          ]
+        }
+      }
     }
   },
   "coupling": {

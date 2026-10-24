@@ -15,9 +15,9 @@ def main():
     report = {'platform': platform.platform(), 'machine': platform.machine(),
               'python': platform.python_version(), 'modules': {}}
     h = Host()
-    for name in ['jsbsim', 'coolprop', 'cantera', 'chrono', 'su2']:
+    for name in ['jsbsim', 'coolprop', 'cantera', 'chrono', 'su2', 'sofa', 'precice', 'openvsp', 'fers', 'meep']:
         try:
-            states = h.run(name, {'steps': 10} if name == 'jsbsim' else {})
+            states = h.run(name, {'steps': 10} if name in ['jsbsim', 'sofa'] else {})
             report['modules'][name] = {'independently_run': True, 'integrated': True,
                                       'sample_count': len(states), 'last_sample': states[-1]}
             if name in ['jsbsim', 'coolprop', 'cantera']:

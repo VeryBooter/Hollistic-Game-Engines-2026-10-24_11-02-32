@@ -102,7 +102,13 @@
       "commit": "c5689fd74e952ac005ed92ba305819fbf7bdc364",
       "license": "LGPL-3.0-or-later",
       "mode": "offline",
-      "source_dir": "external/precice"
+      "source_dir": "external/precice",
+      "patches": [
+        {
+          "file": "patches/precice-3.2.0-boost-asio.patch",
+          "sha256": "1eea7b8f49063feb453fe79e62bed63e26211947d9e839a4add7f26c0bf16a2e"
+        }
+      ]
     },
     "eigen": {
       "repository": "https://gitlab.com/libeigen/eigen.git",

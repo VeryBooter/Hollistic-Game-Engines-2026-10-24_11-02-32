@@ -1,9 +1,65 @@
-$ cmake -S '<PHYSICS>/external/fers' -B '<PHYSICS>/build/fers' -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_POLICY_VERSION_MINIMUM=3.5 '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/fers' -DFERS_BUILD_TESTS=OFF
-CMake Error at CMakeLists.txt:89 (message):
-  Could not locate vcpkg toolchain file.  Set VCPKG_ROOT or
-  CMAKE_TOOLCHAIN_FILE before configuring.
-
-
--- Configuring incomplete, errors occurred!
-
-BLOCKED: Command '['cmake', '-S', '<PHYSICS>/external/fers', '-B', '<PHYSICS>/build/fers', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_C_COMPILER=/usr/bin/clang', '-DCMAKE_CXX_COMPILER=/usr/bin/clang++', '-DCMAKE_OSX_ARCHITECTURES=arm64', '-DCMAKE_POLICY_VERSION_MINIMUM=3.5', '-DCMAKE_INSTALL_PREFIX=<PHYSICS>/install/fers', '-DFERS_BUILD_TESTS=OFF']' returned non-zero exit status 1.
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[323](H5Tprecis.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[324](H5Tref.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[325](H5Tstrpad.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[326](H5Tvisit.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[327](H5Tvlen.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[344](H5VL.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[345](H5VLcallback.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[346](H5VLdyn_ops.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[347](H5VLint.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[348](H5VLnative.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[349](H5VLnative_attr.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[350](H5VLnative_blob.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[351](H5VLnative_dataset.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[352](H5VLnative_datatype.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[353](H5VLnative_file.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[354](H5VLnative_group.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[355](H5VLnative_link.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[356](H5VLnative_introspect.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[357](H5VLnative_object.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[358](H5VLnative_token.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[359](H5VLpassthru.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[360](H5VLpassthru_int.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[361](H5VLquery.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[363](H5VM.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[364](H5WB.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[365](H5Z.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[366](H5Zdeflate.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[367](H5Zfletcher32.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[368](H5Znbit.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[369](H5Zscaleoffset.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[370](H5Zshuffle.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[371](H5Zszip.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[372](H5Ztrans.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libhdf5.a[373](H5build_settings.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[2](adler32.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[3](compress.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[4](crc32.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[5](deflate.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[6](gzclose.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[7](gzlib.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[8](gzread.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[9](gzwrite.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[10](inflate.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[12](inftrees.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[13](inffast.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[14](trees.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libz.a[16](zutil.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libsz.a[2](sz_compat.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libsz.a[3](encode.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libsz.a[4](encode_accessors.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libsz.a[5](decode.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+ld: warning: object file (<PHYSICS>/build/fers/vcpkg_installed/arm64-osx/lib/libsz.a[6](vector.c.o)) was built for newer 'macOS' version (26.0) than being linked (14.0)
+/usr/bin/clang++ -O3 -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mmacosx-version-min=14.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/fers-cli.dir/src/main.cpp.o" -o fers-cli  libfers-cli-core.a ../libfers/libfers.a ../../vcpkg_installed/arm64-osx/lib/libGeographicLib.a ../../vcpkg_installed/arm64-osx/lib/libxml2.a -liconv ../../vcpkg_installed/arm64-osx/lib/libhdf5_hl.a ../../vcpkg_installed/arm64-osx/lib/libhdf5.a -lm ../../vcpkg_installed/arm64-osx/lib/libz.a -ldl ../../vcpkg_installed/arm64-osx/lib/libsz.a ../../vcpkg_installed/arm64-osx/lib/libaec.a
+[100%] Built target fers-cli
+/opt/homebrew/bin/cmake -E cmake_progress_start "<PHYSICS>/build/fers/CMakeFiles" 0
+$ cmake --install '<PHYSICS>/build/fers'
+-- Install configuration: "Release"
+-- Installing: <PHYSICS>/install/fers/lib/libfers.a
+-- Installing: <PHYSICS>/install/fers/lib/libfers.0.1.0.dylib
+-- Up-to-date: <PHYSICS>/install/fers/lib/libfers.0.dylib
+-- Up-to-date: <PHYSICS>/install/fers/lib/libfers.dylib
+-- Up-to-date: <PHYSICS>/install/fers/include/libfers/api.h
+-- Up-to-date: <PHYSICS>/install/fers/lib/cmake/libfers/libfers-config.cmake
+-- Up-to-date: <PHYSICS>/install/fers/lib/cmake/libfers/libfers-config-release.cmake
+-- Installing: <PHYSICS>/install/fers/bin/fers-cli

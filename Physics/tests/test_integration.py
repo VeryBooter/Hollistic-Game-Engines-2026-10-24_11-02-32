@@ -84,4 +84,63 @@ class SolverTests(unittest.TestCase):
         self.assertGreater(r['iterations_recorded'],0)
         self.assertTrue(all(v < -8 for v in r['residuals_log10'].values()))
 
+    def test_sofa_freefall(self):
+        self.assertTrue((ROOT/'install/sofa/bin/runSofa').exists(), 'Build the required SOFA executable first')
+        samples = Host().run('sofa', {'steps': 10})
+        self.assertEqual(len(samples), 10)
+        final = samples[-1]
+        self.assertAlmostEqual(final['time_s'], 0.009, places=6)
+        self.assertAlmostEqual(final['velocity_m_s'][2], 0.0882599, places=5)
+        self.assertAlmostEqual(final['position_m'][2], 0.000441299, places=6)
+
+    def test_precice_coupling(self):
+        self.assertTrue((ROOT/'build/precice-solverdummy/solverdummy').exists(), 'Build the required preCICE solverdummy first')
+        r = Host().run('precice')[0]
+        self.assertEqual(r['module'], 'precice')
+        self.assertEqual(r['coupling_analysis']['status'], 'completed')
+        self.assertEqual(r['coupling_analysis']['time_windows'], 2)
+        self.assertEqual(r['coupling_analysis']['participants'], ['SolverOne', 'SolverTwo'])
+
+    def test_openvsp_vspaero(self):
+        self.assertTrue((ROOT/'install/openvsp/bin/vspaero').exists(), 'Build the required OpenVSP/VSPAERO executable first')
+        r = Host().run('openvsp', {'case': 'hershey'})[0]
+        self.assertEqual(r['module'], 'openvsp')
+        aero = r['aero_analysis']
+        self.assertEqual(aero['case'], 'hershey')
+        self.assertAlmostEqual(aero['mach'], 0.11, places=3)
+        self.assertAlmostEqual(aero['alpha_deg'], 5.0, places=3)
+        self.assertGreater(aero['lift_coefficient'], 0.4)
+        self.assertLess(aero['lift_coefficient'], 0.5)
+        self.assertGreater(aero['drag_coefficient'], 0.01)
+        self.assertLess(aero['drag_coefficient'], 0.03)
+        self.assertGreater(aero['lift_over_drag'], 20.0)
+
+    def test_fers_simulation(self):
+        self.assertTrue((ROOT/'install/fers/lib/libfers.dylib').exists(), 'Build the required FERS library first')
+        r = Host().run('fers')[0]
+        self.assertEqual(r['module'], 'fers')
+        radar = r['radar_analysis']
+        self.assertEqual(radar['scenario_name'], 'FmcwMonostaticPhysicalDechirpScenario')
+        self.assertAlmostEqual(radar['start_time_s'], 0.0)
+        self.assertAlmostEqual(radar['end_time_s'], 0.064, places=4)
+        self.assertAlmostEqual(radar['sampling_rate_hz'], 2.0e6)
+        self.assertEqual(radar['chirp_count'], 64)
+        self.assertAlmostEqual(radar['carrier_frequency_hz'], 10.0e9)
+        self.assertGreater(radar['total_samples'], 100000)
+
+    def test_meep_pulse(self):
+        self.assertTrue((ROOT/'install/meep/bin/meep').exists(), 'Build the required Meep binary first')
+        r = Host().run('meep')[0]
+        self.assertEqual(r['module'], 'meep')
+        em = r['em_analysis']
+        self.assertEqual(em['solver'], 'meep-1.30.0')
+        self.assertEqual(em['dimension'], 3)
+        self.assertEqual(em['timesteps'], 800)
+        self.assertIn('ex', em['components'])
+        stats = em['field_statistics']
+        self.assertGreater(stats['max_abs_field'], 0.001)
+        self.assertLess(stats['max_abs_field'], 0.1)
+        self.assertAlmostEqual(stats['max_field'], 0.004268, places=4)
+        self.assertAlmostEqual(stats['min_field'], -0.006421, places=4)
+
 if __name__ == '__main__': unittest.main()

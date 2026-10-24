@@ -1,65 +1,65 @@
-[ 94%] Built target tlmstr_
-[ 94%] Built target tlmstr1_
-[ 94%] Built target tlmstrc
-[ 95%] Building C object examples/CMakeFiles/tfdjac2_.dir/tfdjac2_.c.o
-[ 96%] Building C object examples/CMakeFiles/tlmstr1c.dir/tlmstr1c.c.o
-[ 97%] Building C object examples/CMakeFiles/tfdjac2c.dir/tfdjac2c.c.o
-clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
-clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
-clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
-[ 98%] Linking C executable tlmstr1c
-[ 99%] Linking C executable tfdjac2c
-[100%] Linking C executable tfdjac2_
-[100%] Built target tlmstr1c
-[100%] Built target tfdjac2_
-[100%] Built target tfdjac2c
-[ 40%] Performing install step for 'CMINPACK'
-[  2%] Built target cmpfiles
-[ 52%] Built target cminpack
-[ 54%] Built target tchkder_
-[ 56%] Built target tchkderc
-[ 58%] Built target thybrd_
-[ 60%] Built target thybrdc
-[ 62%] Built target thybrd1_
-[ 64%] Built target thybrd1c
-[ 66%] Built target thybrj_
-[ 68%] Built target thybrjc
-[ 70%] Built target thybrj1_
-[ 72%] Built target thybrj1c
-[ 74%] Built target tlmder_
-[ 76%] Built target tlmderc
-[ 78%] Built target tlmder1_
-[ 80%] Built target tlmder1c
-[ 82%] Built target tlmdif_
-[ 84%] Built target tlmdifc
-[ 86%] Built target tlmdif1_
-[ 88%] Built target tlmdif1c
-[ 90%] Built target tlmstr_
-[ 92%] Built target tlmstr1_
-[ 94%] Built target tlmstrc
-[ 96%] Built target tlmstr1c
-[ 98%] Built target tfdjac2_
-[100%] Built target tfdjac2c
-Install the project...
+[ 66%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/time.C.o
+[ 67%] Building CXX object vsp_aero/Solver/CMakeFiles/solver.dir/VSP_Agglom.C.o
+[ 68%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/utils.C.o
+[ 69%] Building CXX object vsp_aero/Solver/CMakeFiles/complex.dir/VortexSheetVortex_To_VortexInteractionSet.C.o
+[ 70%] Building CXX object vsp_aero/Solver/CMakeFiles/solver.dir/VSP_Edge.C.o
+[ 70%] Building CXX object vsp_aero/Solver/CMakeFiles/complex.dir/VSP_Agglom.C.o
+[ 71%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/Vortex_Bound.C.o
+[ 71%] Building CXX object vsp_aero/Solver/CMakeFiles/solver.dir/VSP_Geom.C.o
+[ 72%] Building CXX object vsp_aero/Solver/CMakeFiles/complex.dir/VSP_Edge.C.o
+[ 73%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/Vortex_Sheet.C.o
+[ 74%] Building CXX object vsp_aero/Solver/CMakeFiles/solver.dir/VSP_Grid.C.o
+[ 75%] Building CXX object vsp_aero/Solver/CMakeFiles/complex.dir/VSP_Geom.C.o
+[ 75%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/Vortex_Trail.C.o
+[ 76%] Building CXX object vsp_aero/Solver/CMakeFiles/solver.dir/VSP_Loop.C.o
+[ 76%] Building CXX object vsp_aero/Solver/CMakeFiles/complex.dir/VSP_Grid.C.o
+[ 77%] Building CXX object vsp_aero/Solver/CMakeFiles/solver.dir/VSP_Node.C.o
+[ 78%] Building CXX object vsp_aero/Solver/CMakeFiles/complex.dir/VSP_Loop.C.o
+[ 78%] Building CXX object vsp_aero/Solver/CMakeFiles/solver.dir/VSP_Solver.C.o
+[ 79%] Building CXX object vsp_aero/Solver/CMakeFiles/complex.dir/VSP_Node.C.o
+[ 80%] Building CXX object vsp_aero/Solver/CMakeFiles/solver.dir/VSP_Surface.C.o
+[ 80%] Building CXX object vsp_aero/Solver/CMakeFiles/complex.dir/VSP_Solver.C.o
+[ 81%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/VortexSheetInteractionLoop.C.o
+[ 82%] Building CXX object vsp_aero/Solver/CMakeFiles/complex.dir/VSP_Surface.C.o
+[ 83%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/VortexSheetVortex_To_VortexInteractionSet.C.o
+[ 83%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/VSP_Agglom.C.o
+[ 84%] Building CXX object vsp_aero/Solver/CMakeFiles/solver.dir/VSPAERO_TYPES.C.o
+[ 84%] Building CXX object vsp_aero/Solver/CMakeFiles/solver.dir/WOPWOP.C.o
+[ 85%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/VSP_Edge.C.o
+[ 86%] Linking CXX static library libsolver.a
+[ 86%] Built target solver
+[ 87%] Building CXX object vsp_aero/Solver/CMakeFiles/complex.dir/VSPAERO_TYPES.C.o
+[ 88%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/VSP_Geom.C.o
+[ 89%] Building CXX object vsp_aero/Solver/CMakeFiles/vspaero.dir/vspaero.C.o
+[ 90%] Building CXX object vsp_aero/Solver/CMakeFiles/complex.dir/WOPWOP.C.o
+[ 91%] Linking CXX executable vspaero
+[ 91%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/VSP_Grid.C.o
+[ 91%] Built target vspaero
+[ 92%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/VSP_Loop.C.o
+[ 93%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/VSP_Node.C.o
+[ 93%] Linking CXX static library libcomplex.a
+[ 93%] Built target complex
+[ 94%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/VSP_Solver.C.o
+[ 95%] Building CXX object vsp_aero/Solver/CMakeFiles/vspaero_complex.dir/vspaero.C.o
+[ 95%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/VSP_Surface.C.o
+[ 96%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/VSPAERO_TYPES.C.o
+[ 97%] Building CXX object vsp_aero/Solver/CMakeFiles/adjoint.dir/WOPWOP.C.o
+[ 97%] Linking CXX executable vspaero_complex
+[ 97%] Built target vspaero_complex
+[ 97%] Linking CXX static library libadjoint.a
+[ 97%] Built target adjoint
+[ 98%] Building CXX object vsp_aero/Solver/CMakeFiles/vspaero_adjoint.dir/vspaero.C.o
+[ 99%] Building CXX object vsp_aero/Solver/CMakeFiles/vspaero_opt.dir/vspaero_opt.C.o
+[ 99%] Building CXX object vsp_aero/Solver/CMakeFiles/vspaero_opt.dir/VSP_Optimizer.C.o
+[ 99%] Linking CXX executable vspaero_opt
+ld: warning: ignoring duplicate libraries: '<PHYSICS>/build/vspaero-libraries/Adept2-prefix/lib/libadept.a'
+[ 99%] Built target vspaero_opt
+[100%] Linking CXX executable vspaero_adjoint
+[100%] Built target vspaero_adjoint
+$ cmake --install '<PHYSICS>/build/openvsp' --prefix '<PHYSICS>/install/openvsp'
 -- Install configuration: "Release"
--- Installing: <PHYSICS>/build/openvsp-libraries/CMINPACK-prefix/lib/libcminpack_s.a
--- Installing: <PHYSICS>/build/openvsp-libraries/CMINPACK-prefix/include/cminpack-1/cminpack.h
--- Installing: <PHYSICS>/build/openvsp-libraries/CMINPACK-prefix/include/cminpack-1/minpack.h
--- Installing: <PHYSICS>/build/openvsp-libraries/CMINPACK-prefix/lib/pkgconfig/cminpack.pc
--- Installing: <PHYSICS>/build/openvsp-libraries/CMINPACK-prefix/share/cminpack/CMinpackConfig.cmake
--- Installing: <PHYSICS>/build/openvsp-libraries/CMINPACK-prefix/share/cminpack/CMinpackConfig-release.cmake
-[ 41%] Completed 'CMINPACK'
-[ 45%] Built target CMINPACK
-[100%] Linking CXX static library libdelabella.a
-[100%] Built target delabella
-[ 46%] Performing install step for 'DELABELLA'
-[100%] Built target delabella
-Install the project...
--- Install configuration: "Release"
--- Installing: <PHYSICS>/build/openvsp-libraries/DELABELLA-prefix/include/delabella.h
--- Installing: <PHYSICS>/build/openvsp-libraries/DELABELLA-prefix/lib/libdelabella.a
-[ 47%] Completed 'DELABELLA'
-[ 47%] Built target DELABELLA
-make: *** [all] Error 2
-
-BLOCKED: Command '['cmake', '--build', '<PHYSICS>/build/openvsp-libraries', '--parallel', '4']' returned non-zero exit status 2.
+-- Installing: <PHYSICS>/install/openvsp/./vspaero
+-- Installing: <PHYSICS>/install/openvsp/./vspaero_complex
+-- Installing: <PHYSICS>/install/openvsp/./vspaero_adjoint
+-- Installing: <PHYSICS>/install/openvsp/./vspaero_opt
+-- Installing: <PHYSICS>/install/openvsp/./vsploads

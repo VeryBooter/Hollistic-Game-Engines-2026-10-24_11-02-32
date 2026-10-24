@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "startup_mutual_detection": true,
+  "pause_verified": true,
+  "reset_verified": true,
+  "clean_shutdown": true,
+  "telemetry_time_s": 0.26666666666666666
+}

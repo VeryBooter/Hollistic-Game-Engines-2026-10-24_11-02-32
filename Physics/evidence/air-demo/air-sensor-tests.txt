@@ -1,0 +1,10 @@
+test_aperture_frequency_and_scan_tradeoffs (test_demo_sensors.SensorPhysicsTests) ... ok
+test_frequency_switch_does_not_reuse_old_track (test_demo_sensors.SensorPhysicsTests) ... ok
+test_inverse_fourth_power_and_si_wavelength (test_demo_sensors.SensorPhysicsTests) ... ok
+test_optical_cue_and_track_timeout (test_demo_sensors.SensorPhysicsTests) ... ok
+test_reject_invalid_frequency_and_range (test_demo_sensors.SensorPhysicsTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
